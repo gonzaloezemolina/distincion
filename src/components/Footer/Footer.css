@@ -1,0 +1,29 @@
+footer{
+    height: 100%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(104, 104, 104);
+    position: relative;
+    h4{
+        font-family: "Rosario";
+    }
+}
+
+
+.titulo-footer{
+    padding-top: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.redes__footer{
+    padding-top: 10px;
+    text-align: center;
+}
+.redes__iconos{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    gap: 20px;
+}
