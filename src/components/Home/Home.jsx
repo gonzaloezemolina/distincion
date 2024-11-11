@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const Home = () => {
 
     const saludables = '../img/saludable.webp';
-    const catering = '../img/catering.png';
+    const catering = '../img/torta.webp';
     const desayunos = '../img/desayunos.png';
-    const platos = '../img/milanesa.jpg';
+    const platos = '../img/vaso-cafe.jpg';
 
   return (
     <div className='home'>

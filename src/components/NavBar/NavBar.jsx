@@ -15,20 +15,20 @@ const NavBar = () => {
                     <ul className='navItems'>
                         <li>
                             <NavLink to={"/categoria/2"}>
-                            Desayunos y meriendas
+                            Desayunos
                             </NavLink>
                         </li>
                         
 
                         <li>
                             <NavLink to={"/categoria/3"}>
-                            Menú diario
+                            Meriendas
                             </NavLink>
                         </li>
 
                         <li>
                             <NavLink to={"/categoria/4"}>
-                            Catering
+                            Cafes y bebidas
                             </NavLink>
                         </li>
 
