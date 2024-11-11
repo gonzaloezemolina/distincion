@@ -96,7 +96,7 @@ const Checkout = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor=""> Email Confirmación </label>
+                    <label htmlFor=""> Tarjeta </label>
                     <input type="email" value={emailConfirmarcion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
                 </div>
 
@@ -108,7 +108,7 @@ const Checkout = () => {
 
                 {
                     ordenId && (
-                        <strong className="orderId">Gracias por comprar ☺ Tu número de orden es: {ordenId} </strong>
+                        <strong className="orderId">Gracias por comprar. Tu número de orden es: {ordenId} </strong>
                     )
                 }
             </form>
