@@ -12,7 +12,7 @@ const Checkout = () => {
     const [telefono, setTelefono] = useState("");
     const [direccion, setDireccion] = useState("");
     const [email, setEmail] = useState("");
-    const [emailConfirmarcion, setEmailConfirmacion] = useState("");
+    const [tarjeta, setTarjeta] = useState("");
     const [error, setError] = useState("");
     const [ordenId, setOrdenId] = useState("");
 
@@ -21,16 +21,10 @@ const Checkout = () => {
     const manejadorSubmit = (event) => {
         event.preventDefault();
 
-        if (!nombre || !apellido || !telefono || !direccion || !email || !emailConfirmarcion) {
+        if (!nombre || !apellido || !telefono || !direccion || !email || !tarjeta) {
             setError("Campos incompletos");
             return;
         }
-
-        if (email !== emailConfirmarcion) {
-            setError("Verifique el email ingresado coincida");
-            return;
-        }
-
 
         const orden = {
             items: carrito.map(producto => ({
@@ -43,7 +37,8 @@ const Checkout = () => {
             apellido,
             telefono,
             direccion,
-            email
+            email,
+            tarjeta
         };
 
         addDoc(collection(db, "ordenes"), orden)
@@ -97,7 +92,7 @@ const Checkout = () => {
 
                 <div className="form-group">
                     <label htmlFor=""> Tarjeta </label>
-                    <input type="email" value={emailConfirmarcion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
+                    <input type="tarjeta" value={tarjeta} onChange={(e) => setTarjeta(e.target.value)} />
                 </div>
 
                 {
@@ -108,7 +103,7 @@ const Checkout = () => {
 
                 {
                     ordenId && (
-                        <strong className="orderId">Gracias por comprar. Tu número de orden es: {ordenId} </strong>
+                        <strong className="orderId">Gracias por comprar. Tu número de orden es: {ordenId}. Se ha enviado un email a tu correo </strong>
                     )
                 }
             </form>
